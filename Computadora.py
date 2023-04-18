@@ -1,8 +1,9 @@
 from Teclado import Teclado
-from Raton import  Raton
+from Raton import Raton
 from Monitor import Monitor
-class Computadora:
 
+
+class Computadora:
     contador_computadoras = 0
 
     @classmethod
@@ -10,7 +11,7 @@ class Computadora:
         cls.contador_computadoras += 1
         return cls.contador_computadoras
 
-    def __init__(self,nombre,monitor,teclado,raton):
+    def __init__(self, nombre, monitor, teclado, raton):
         self._id_computadora = Computadora._contador_computadoras()
         self._nombre = nombre
         self._monitor = monitor
@@ -25,9 +26,10 @@ class Computadora:
         Ratón: {self._raton}
         '''
 
+
 if __name__ == '__main__':
-    teclado1 = Teclado('HP','USB')
-    raton1 = Raton('HP','USB')
-    monitor1 = Monitor('HP',15.6)
-    computadora1 = Computadora('HP',monitor1,teclado1,raton1)
+    teclado1 = Teclado('HP', 'USB')
+    raton1 = Raton('HP', 'USB')
+    monitor1 = Monitor('HP', 15.6)
+    computadora1 = Computadora('HP', monitor1, teclado1, raton1)
     print(computadora1)
